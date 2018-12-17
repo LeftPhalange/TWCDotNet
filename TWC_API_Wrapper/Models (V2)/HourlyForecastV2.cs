@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace TWC_API_Wrapper
+namespace TWCDotNet.Models__V2_
 {
-    public class HourlyForecast
+    public class HourlyForecastV2
     {
         [JsonProperty("vt1hourlyforecast")]
         public VT1Forecast HourlyForecastData { get; set; }

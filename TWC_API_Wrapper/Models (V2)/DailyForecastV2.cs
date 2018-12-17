@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace TWC_API_Wrapper
+namespace TWCDotNet.Models__V2_
 {
-    public class DailyForecast
+    public class DailyForecastV2
     {
         [JsonProperty("vt1dailyforecast")]
         public VT1DailyForecast DailyForecastData { get; set; }
@@ -14,41 +14,41 @@ namespace TWC_API_Wrapper
         [JsonProperty("dayPartName")]
         public string[] DayPartName { get; set; }
         [JsonProperty("precipPct")]
-        public int[] PrecipPct { get; set; }
+        public int?[] PrecipPct { get; set; }
         [JsonProperty("precipAmt")]
-        public double[] PrecipAmt { get; set; }
+        public double?[] PrecipAmt { get; set; }
         [JsonProperty("precipType")]
-        public string PrecipType { get; set; } // if null, no precip is anticipated
+        public string[] PrecipType { get; set; } // if null, no precip is anticipated
         [JsonProperty("temperature")]
-        public int[] Temperature { get; set; }
+        public int?[] Temperature { get; set; }
         [JsonProperty("uvIndex")]
-        public int[] UvIndex { get; set; }
+        public int?[] UvIndex { get; set; }
         [JsonProperty("uvDescription")]
         public string[] UvDescription { get; set; }
         [JsonProperty("icon")]
-        public int[] Icon { get; set; }
+        public int?[] Icon { get; set; }
         [JsonProperty("iconExtended")]
-        public int[] IconExtended { get; set; }
+        public int?[] IconExtended { get; set; }
         [JsonProperty("phrase")]
         public string[] Phrase { get; set; }
         [JsonProperty("narrative")]
         public string[] Narrative { get; set; }
         [JsonProperty("cloudPct")]
-        public int[] CloudPct { get; set; }
+        public int?[] CloudPct { get; set; }
         [JsonProperty("windDirCompass")]
         public string[] WindDirCompass { get; set; }
         [JsonProperty("windDirDegrees")]
-        public int[] WindDirDegrees { get; set; }
+        public int?[] WindDirDegrees { get; set; }
         [JsonProperty("windSpeed")]
-        public int[] WindSpeed { get; set; }
+        public int?[] WindSpeed { get; set; }
         [JsonProperty("humidityPct")]
-        public int[] HumidityPct { get; set; }
+        public int?[] HumidityPct { get; set; }
         [JsonProperty("qualifier")]
         public string[] Qualifier { get; set; }
         [JsonProperty("snowRange")]
         public string[] SnowRange { get; set; }
         [JsonProperty("thunderEnum")]
-        public int[] ThunderEnum { get; set; }
+        public int?[] ThunderEnum { get; set; }
         [JsonProperty("thunderEnumPhrase")]
         public string[] ThunderEnumPhrase { get; set; }
     }
@@ -73,8 +73,8 @@ namespace TWC_API_Wrapper
         [JsonProperty("snowQpf")]
         public double[] SnowQpf { get; set; }
         [JsonProperty("day")]
-        public List<ForecastDay> Day { get; set; }
+        public ForecastDay Day { get; set; }
         [JsonProperty("night")]
-        public List<ForecastDay> Night { get; set; }
+        public ForecastDay Night { get; set; }
     }
 }

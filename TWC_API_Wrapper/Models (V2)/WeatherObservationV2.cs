@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json;
 
-namespace TWC_API_Wrapper
+namespace TWCDotNet.Models__V2_
 {
-    public class WeatherObservation
+    public class WeatherObservationV2
     {
         [JsonProperty("vt1observation")]
         public Observation ObservationData { get; set; }
@@ -25,7 +25,7 @@ namespace TWC_API_Wrapper
         [JsonProperty("feelsLike")]
         public int FeelsLike { get; set; }
         [JsonProperty("gust")]
-        public int Gusts { get; set; }
+        public int? Gusts { get; set; }
         [JsonProperty("humidity")]
         public int Humidity { get; set; }
         [JsonProperty("icon")]
