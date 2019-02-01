@@ -7,7 +7,7 @@ namespace TWCDotNet.Models__V1_
 {
     public class DailyForecast10Day
     {
-        [JsonProperty("fod_long_range_daily")]
+        [JsonProperty("class")]
         public string Class { get; set; }
         [JsonProperty("expire_time_gmt")]
         public string ExpireTimeGMT { get; set; }
@@ -22,13 +22,13 @@ namespace TWCDotNet.Models__V1_
         [JsonProperty("min_temp")]
         public int? MinimumTemperature { get; set; }
         [JsonProperty("torcon")]
-        public object TORCONValue { get; set; }
+        public int? TORCONValue { get; set; }
         [JsonProperty("stormcon")]
-        public object STORMCONValue { get; set; }
+        public int? STORMCONValue { get; set; }
         [JsonProperty("blurb")]
-        public object Blurb { get; set; }
+        public string Blurb { get; set; }
         [JsonProperty("blurb_author")]
-        public object Blurb_Author { get; set; }
+        public string Blurb_Author { get; set; }
         [JsonProperty("lunar_phase_day")]
         public int? LunarPhaseDay { get; set; }
         [JsonProperty("dow")]
@@ -46,9 +46,9 @@ namespace TWCDotNet.Models__V1_
         [JsonProperty("moonset")]
         public string Moonset { get; set; }
         [JsonProperty("qualifier_code")]
-        public object QualifierCode { get; set; }
+        public string QualifierCode { get; set; }
         [JsonProperty("qualifier")]
-        public object Qualifier { get; set; }
+        public string Qualifier { get; set; }
         [JsonProperty("narrative")]
         public string Narrative { get; set; }
         [JsonProperty("qpf")]
@@ -148,9 +148,9 @@ namespace TWCDotNet.Models__V1_
             [JsonProperty("vocal_key")]
             public string VocalKey { get; set; }
             [JsonProperty("qualifier_code")]
-            public object QualifierCode { get; set; }
+            public string QualifierCode { get; set; }
             [JsonProperty("qualifier")]
-            public object Qualifier { get; set; }
+            public string Qualifier { get; set; }
             [JsonProperty("uv_index_raw")]
             public int? UV_Index_Raw { get; set; }
             [JsonProperty("uv_index")]

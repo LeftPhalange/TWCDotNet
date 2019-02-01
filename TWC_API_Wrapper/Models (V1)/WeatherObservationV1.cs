@@ -37,7 +37,7 @@ namespace TWCDotNet.Models__V1_
         [JsonProperty("uv_warning")]
         public int? UVWarning { get; set; }
         [JsonProperty("obs_qualifier_code")]
-        public object ObsQualifierCode { get; set; }
+        public string ObsQualifierCode { get; set; }
         [JsonProperty("ptend_code")]
         public int? PTendCode { get; set; }
         [JsonProperty("dow")]
@@ -57,7 +57,7 @@ namespace TWCDotNet.Models__V1_
         [JsonProperty("clds")]
         public string CloudCover { get; set; }
         [JsonProperty("obs_qualifier_severity")]
-        public object ObsQualifierSeverity { get; set; }
+        public int? ObsQualifierSeverity { get; set; }
         [JsonProperty("vocal_key")]
         public string VocalKey { get; set; }
         [JsonProperty("imperial")]
@@ -132,10 +132,10 @@ namespace TWCDotNet.Models__V1_
         [JsonProperty("precip_7day")]
         public double? Precip_7Day { get; set; }
         [JsonProperty("obs_qualifier_100char")]
-        public object ObsQualifier100Char { get; set; }
+        public string ObsQualifier100Char { get; set; }
         [JsonProperty("obs_qualifier_50char")]
-        public object ObsQualifier50Char { get; set; }
+        public string ObsQualifier50Char { get; set; }
         [JsonProperty("obs_qualifier_32char")]
-        public object ObsQualifier32Char { get; set; }
+        public string ObsQualifier32Char { get; set; }
     }
 }
