@@ -35,7 +35,6 @@ namespace TWCDotNet
             _geocode = Geocode.Trim();
             _wc = new WebClient();
         }
-
         public WeatherObservationV2 GetWeatherObservationVT1()
             => JsonConvert.DeserializeObject<WeatherObservationV2>(_wc.DownloadString(string.Format(_urlV2, ReturnType(QueryType.Observation, APIType.V2), _apiKey, _geocode)));
         public HourlyForecastV2 GetHourlyForecastVT1()
@@ -46,9 +45,8 @@ namespace TWCDotNet
             => JsonConvert.DeserializeObject<HeadlinesV3>(_wc.DownloadString(string.Format(_urlV3, ReturnType(QueryType.Headlines, APIType.V3), _apiKey, _geocode)));
         public WeatherObservationV1 GetWeatherObservation()
             => JsonConvert.DeserializeObject<WeatherObservationV1>(_wc.DownloadString(string.Format(_urlV1, _geocode.Split(',')[0], _geocode.Split(',')[1], ReturnType(QueryType.Observation, APIType.V1), _apiKey)));
-        public DailyForecast10Day[] GetDailyForecast10Day()
-            => JsonConvert.DeserializeObject<DailyForecast10Day[]>(_wc.DownloadString(string.Format(_urlV1, _geocode.Split(',')[0], _geocode.Split(',')[1], ReturnType(QueryType.Observation, APIType.V1), _apiKey)));
-
+        public DailyForecast10Day GetDailyForecast10Day()
+            => JsonConvert.DeserializeObject<DailyForecast10Day>(_wc.DownloadString(string.Format(_urlV1, _geocode.Split(',')[0], _geocode.Split(',')[1], ReturnType(QueryType.Daily, APIType.V1), _apiKey)));
         public string ReturnType (QueryType Type, APIType API)
         {
             string TypeStr = null;
