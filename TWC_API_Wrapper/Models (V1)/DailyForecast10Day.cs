@@ -88,7 +88,7 @@ namespace TWCDotNet.Models__V1_
         [JsonProperty("alt_daypart_name")]
         public string AlternateDaypartName { get; set; }
         [JsonProperty("thunder_enum_phrase")]
-        public long? ThunderEnumerationPhrase { get; set; }
+        public string ThunderEnumerationPhrase { get; set; }
         [JsonProperty("num")]
         public int Num { get; set; }
         [JsonProperty("temp")]
@@ -142,9 +142,9 @@ namespace TWCDotNet.Models__V1_
         [JsonProperty("narrative")]
         public string Narrative { get; set; }
         [JsonProperty("qpf")]
-        public int? QPF { get; set; }
+        public double? QPF { get; set; }
         [JsonProperty("snow_qpf")]
-        public int? Snow_QPF { get; set; }
+        public double? Snow_QPF { get; set; }
         [JsonProperty("snow_range")]
         public string Snow_Range { get; set; }
         [JsonProperty("snow_phrase")]
@@ -158,7 +158,7 @@ namespace TWCDotNet.Models__V1_
         [JsonProperty("qualifier")]
         public string Qualifier { get; set; }
         [JsonProperty("uv_index_raw")]
-        public int? UV_Index_Raw { get; set; }
+        public double? UV_Index_Raw { get; set; }
         [JsonProperty("uv_index")]
         public int? UV_Index { get; set; }
         [JsonProperty("uv_warning")]
