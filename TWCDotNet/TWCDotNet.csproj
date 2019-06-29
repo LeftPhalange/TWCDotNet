@@ -4,6 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>TWCDotNet</AssemblyName>
     <RootNamespace>TWCDotNet</RootNamespace>
+    <Company>Individual</Company>
+    <Authors>Ethan Bovard</Authors>
+    <Description>This class library enables developers to breezily obtain weather data from the v1/v2/v3 api.weather.com products found on weather.com.</Description>
   </PropertyGroup>
 
   <ItemGroup>
