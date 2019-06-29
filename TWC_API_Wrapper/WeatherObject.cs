@@ -47,7 +47,7 @@ namespace TWCDotNet
             => JsonConvert.DeserializeObject<WeatherObservationV1>(_wc.DownloadString(string.Format(_urlV1, _geocode.Split(',')[0], _geocode.Split(',')[1], ReturnType(QueryType.Observation, APIType.V1), _apiKey)));
         public DailyForecast10Day GetDailyForecast10Day()
             => JsonConvert.DeserializeObject<DailyForecast10Day>(_wc.DownloadString(string.Format(_urlV1, _geocode.Split(',')[0], _geocode.Split(',')[1], ReturnType(QueryType.Daily, APIType.V1), _apiKey)));
-        public string ReturnType (QueryType Type, APIType API)
+        private string ReturnType (QueryType Type, APIType API)
         {
             string TypeStr = null;
             switch (Type)
