@@ -51,4 +51,6 @@ Please refer to the classes in each model, you can see those by opening TWCDotNe
 The TWCDotNet API was made for enterprise developers to provide weather data breezily, without creating classes to parse hundreds of fields.
 Credit to The Weather Channel/Weather Group/IBM for the JSON API. I do not work for them, I only made the wrapper for ease of use to prospective developers who want to use the API.
 
+I reiterate that this API is for official use only.
+
 This project is made under the MIT license for open source software.
