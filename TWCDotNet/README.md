@@ -13,6 +13,7 @@ This prerequisite is important if you are implementing this class library as a d
     - Alerts
     - Daily Forecast (10-Day)
     - Weather Observations
+	- Air Quality Forecast
 * The following V2 (VT1) products are supported:
     - Daily Forecast
     - Hourly Forecast
