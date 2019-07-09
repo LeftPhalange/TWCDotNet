@@ -50,7 +50,12 @@ namespace TWCDotNet
             _wc = new WebClient();
         }
         private string[] _getQueryArgs(QueryType ProductType)
-            => new string[] { (_locType == LocationType.Geocode) ? "geocode" : "location", _geocode.Replace(',', '/') ?? _location, _returnType(ProductType, APIType.V1), _apiKey };
+        {
+            if (_locType == LocationType.Location)
+                return new string[] { "location", _location, _returnType(ProductType, APIType.V1), _apiKey };
+            else
+                return new string[] { "geocode", _geocode, _returnType(ProductType, APIType.V1), _apiKey };
+        }
 
         public WeatherObservationV2 GetWeatherObservationVT1()
             => JsonConvert.DeserializeObject<WeatherObservationV2>(_wc.DownloadString(string.Format(_urlV2, _returnType(QueryType.Observation, APIType.V2), _apiKey, _geocode)));
