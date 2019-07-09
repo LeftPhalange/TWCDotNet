@@ -44,7 +44,6 @@ namespace TWCDotNet
                 _geocode = Location;
             else
                 _geocode = null;
-            string helloThere = string.Format(_urlV1, _getQueryArgs(QueryType.Observation));
             _locType = LocType;
             _apiKey = APIKey;
             _wc = new WebClient();
