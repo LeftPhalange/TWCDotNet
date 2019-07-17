@@ -29,6 +29,7 @@ Wherever you put the DLL for TWCDotNet in your working directory, browse for it,
 You should then be able to create a new instance of the object WeatherObject. WeatherObject takes two arguments for instantiation:
 * `string APIKey`
 * `string Location` (example format: "33.75,-84.39" for geocode or "USNY0483:1:US" for location, used to fetch high-resolution weather data)
+
 *NOTE*: Geocodes can be used in all v1, v2, and v3 products. Location is known to only work when using v1 products. So if you instantiate the WeatherObject class, be sure if you are using a non-geocode location you should work with v1 products only, or use the same key you would for all products to use an instance of the object each time.
 
 You have the following public methods to work from:
